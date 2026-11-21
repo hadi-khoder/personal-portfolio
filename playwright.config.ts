@@ -6,13 +6,13 @@ export default defineConfig({
   workers: 1,
   timeout: 60000,
   use: {
-    baseURL: "http://127.0.0.1:3100",
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || "http://127.0.0.1:3100",
     channel: process.env.PLAYWRIGHT_CHANNEL || "chrome",
     headless: true,
     reducedMotion: "reduce",
     trace: "retain-on-failure",
   },
-  webServer: {
+  webServer: process.env.PLAYWRIGHT_BASE_URL ? undefined : {
     command: `"${process.execPath}" node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3100`,
     url: "http://127.0.0.1:3100",
     reuseExistingServer: false,

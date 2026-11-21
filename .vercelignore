@@ -1,0 +1,14 @@
+.git/
+node_modules/
+.next/
+.local/
+test-results/
+playwright-report/
+coverage/
+.env*
+!.env.example
+*.tsbuildinfo
+*.log
+*.pem
+*.key
+credentials.json

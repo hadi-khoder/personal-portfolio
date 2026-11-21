@@ -88,6 +88,8 @@ Coverage includes 320px and 390px mobile widths, 768px tablet, 1440px desktop, h
 
 Browser verification uses local Chrome. Live Vercel checks remain pending deployment.
 
+Set `PLAYWRIGHT_BASE_URL` to the HTTPS production URL before `npm run test:e2e` to run the same checks against the live deployment without starting a local server.
+
 ## Vercel deployment
 
 1. Push this project, including both files in `public/` and `package-lock.json`, to GitHub.
