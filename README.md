@@ -86,7 +86,7 @@ Tests use installed Google Chrome by default, launch a temporary local productio
 
 Coverage includes 320px and 390px mobile widths, 768px tablet, 1440px desktop, horizontal overflow, portrait loading, project disclosures, mobile menu Escape/focus behavior, skip navigation, official link destinations, PDF HTTP status and byte integrity, SEO metadata, social image response, robots.txt, and axe WCAG A/AA scans. Screenshots and failure traces are saved in ignored `test-results/`.
 
-Browser verification uses local Chrome. Live Vercel checks remain pending deployment.
+Browser verification uses local Chrome. Live production checks are run against https://hadi-khoder.vercel.app using `PLAYWRIGHT_BASE_URL`.
 
 Set `PLAYWRIGHT_BASE_URL` to the HTTPS production URL before `npm run test:e2e` to run the same checks against the live deployment without starting a local server.
 
@@ -97,7 +97,7 @@ Set `PLAYWRIGHT_BASE_URL` to the HTTPS production URL before `npm run test:e2e` 
 3. Set `NEXT_PUBLIC_SITE_URL` to the final public production URL in Vercel for canonical and social metadata; `.env.example` documents the variable. Vercel's production domain variable is used as a fallback. Local builds use localhost for image metadata and omit the canonical URL until a production URL exists.
 4. Deploy, then verify the live home page, portrait, contact links, and `/Hadi-Khoder-CV.pdf` download.
 
-No production domain, certification, project URL, institution, achievement, or completion claim is invented. This workspace has not been published to GitHub or Vercel.
+No production domain, certification, project URL, institution, achievement, or completion claim is invented. Published repository: https://github.com/hadi-khoder/personal-portfolio. Production website: https://hadi-khoder.vercel.app. Vercel uses the free Hobby plan and automatically deploys the main branch.
 
 ## Latest verified results
 
@@ -114,3 +114,12 @@ No production domain, certification, project URL, institution, achievement, or c
 - Added the supplied university names, degrees, and Cisco Networking Academy certifications.
 - Removed unused missing-technology placeholder markup and disabled Next.js development indicators.
 - Photo, theme, typography, and responsive layout remain unchanged.
+
+
+## Published production configuration
+
+- GitHub: https://github.com/hadi-khoder/personal-portfolio (`main`).
+- Vercel: https://hadi-khoder.vercel.app, project `hadi-khoder`, Next.js preset, Node.js 22.x, Hobby plan.
+- The GitHub App is connected for automatic main-branch deployments. HTTPS and the production canonical URL are active.
+- The live original PDF returns HTTP 200 with `application/pdf` and matches the supplied original bytes.
+- No domains or paid subscriptions were purchased. The original design and assets remain unchanged.
